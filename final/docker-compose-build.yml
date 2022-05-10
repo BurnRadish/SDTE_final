@@ -1,9 +1,8 @@
 version: "3"
 services:
   frontend:
-    image: burino/final-frontend:1.0.0
+    image: burino-sdte/final-frontend:1.0.0
     build: ./front
   backend:
-    image: burino/final-backend:1.0.0
+    image: burino-sdte/final-backend:1.0.0
     build: ./back
-
