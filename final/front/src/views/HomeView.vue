@@ -27,13 +27,15 @@
           </p>
         </div>
         <br />
-        <a href="" class="danger-a"
-          >ลูกค้า TrueOnline และ TrueVision คลิกที่นี่<br />
-          For TrueOnline and Truevision customer click here</a
-        ><br /><br />
-        <b-button pill variant="danger">ขอรหัส OTP / Get OTP</b-button>
+        <router-link class="danger-a" to="/tol-tvs">ลูกค้า TrueOnline และ TrueVision คลิกที่นี่<br />
+          For TrueOnline and Truevision customer click here</router-link>
+        <br /><br />
+        <b-button pill variant="danger" @click="toReserve()">ขอรหัส OTP / Get OTP</b-button>
       </div>
     </b-container>
+    <div>
+    <b-img-lazy v-bind="mainProps" :src="require('../assets/footer.svg')" alt="Image 1"></b-img-lazy>
+    </div>
   </div>
 </template>
 
@@ -57,7 +59,9 @@ export default {
       }
     },
     methods: {
-      
+      toReserve(){
+        this.$router.push({ path: '/reserve', replace: true })
+      }
     }
 };
 </script>

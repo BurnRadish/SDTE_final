@@ -13,6 +13,11 @@ const routes = [
     path: '/tol-tvs',
     name: 'tol',
     component: () => import('../views/TolView.vue')
+  },
+  {
+    path: '/reserve',
+    name: 'reserve',
+    component: () => import('../views/ReserveView.vue')
   }
 ]
 

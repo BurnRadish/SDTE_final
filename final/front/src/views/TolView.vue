@@ -52,6 +52,9 @@
         </div>
       </div>
     </b-container>
+    <div>
+    <b-img-lazy v-bind="mainProps" :src="require('../assets/footer.svg')" alt="Image 1"></b-img-lazy>
+    </div>
   </div>
 </template>
 
