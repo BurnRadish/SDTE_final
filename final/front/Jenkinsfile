@@ -10,8 +10,17 @@ pipeline{
         stage('Download dependency') {
             steps {
                 dir("final"){
-                    dir("back"){
-                        sh 'npm install'   
+                    dir("front"){
+                        sh 'npm install -g http-server'   
+                    }   
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                dir("final"){
+                    dir("front"){
+                        sh 'npm run build'   
                     }   
                 }
             }
