@@ -1,0 +1,10 @@
+version: "3"
+services:
+  backend:
+    image: burino/backend:1.0.0
+    ports:
+      - "3213:3213"
+  frontend:
+    image: burino/frontend:1.0.0
+    ports:
+      - "8099:8099"
