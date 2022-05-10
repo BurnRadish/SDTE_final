@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send("Server running la")
+  res.send("Server running la").status(200)
 })
 
 app.get('/reviews', async(req, res) => {
@@ -28,6 +28,6 @@ app.get('/reviews', async(req, res) => {
   
 })
 
-app.listen(port, () => {
-  console.log(`Server run at http://localhost:${port}`)
+module.exports = app.listen(port, () => {
+  console.log('Application is running on port ' + port)
 })
