@@ -1,3 +1,17 @@
-FROM alpine:3.14
+FROM node:lts-alpine
 
 ENV NODE_VERSION 16.15.0
+
+RUN npm install -g http-server
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+CMD [ "http-server", "-p 8089", "dist" ]
